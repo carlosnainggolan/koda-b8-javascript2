@@ -1,4 +1,9 @@
 function hitungStatistik(data) {
+    if (!Array.isArray(data)) {
+        console.log("Error: Input harus berupa Array!");
+        return; 
+    }
+    
     let max = data[0];
     let min = data[0];
     let avg = 0;
