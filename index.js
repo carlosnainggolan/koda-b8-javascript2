@@ -1,9 +1,16 @@
 function hitungStatistik(data) {
     if (!Array.isArray(data)) {
         console.log("Error: Input harus berupa Array!");
-        return; 
+        return;
     }
-    
+
+    for (let i = 0; i < data.length; i++) {
+        if (typeof data[i] !== "number") {
+            console.log(`Error: Elemen pada indeks ke-${i} (${data[i]}) bukan angka!`);
+            return; 
+        }
+    }
+
     let max = data[0];
     let min = data[0];
     let avg = 0;
@@ -12,11 +19,9 @@ function hitungStatistik(data) {
         if (data[i] > max) {
             max = data[i];
         }
-
         if (min > data[i]) {
             min = data[i];
         }
-
         avg += data[i];
     }
     avg /= data.length;
@@ -26,5 +31,4 @@ function hitungStatistik(data) {
     console.log(`Nilai Max: ${max}`);
 }
 
-let data1 = [2, 4, 6, 8];
-hitungStatistik(dataAwal);
+hitungStatistik([2, "empat", 6, 8]);
