@@ -4,10 +4,15 @@ function hitungStatistik(data) {
         return;
     }
 
+    if (data.length === 0) {
+        console.log("Error: Array tidak boleh kosong!");
+        return;
+    }
+
     for (let i = 0; i < data.length; i++) {
         if (typeof data[i] !== "number") {
             console.log(`Error: Elemen pada indeks ke-${i} (${data[i]}) bukan angka!`);
-            return; 
+            return;
         }
     }
 
@@ -31,4 +36,5 @@ function hitungStatistik(data) {
     console.log(`Nilai Max: ${max}`);
 }
 
-hitungStatistik([2, "empat", 6, 8]);
+hitungStatistik([2, 4, 6, 8]);
+hitungStatistik([]);
