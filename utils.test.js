@@ -15,7 +15,8 @@ describe("Calculate Array Stats", () => {
 
   it("should throw an error if any element in the array is not a number", () => {
     const data = [1, 2, "three", 4];
-    assert.throws(() => utils(data) )});
+    assert.throws(() => utils(data));
+  });
 });
 
 it("should return the correct average, minimum, and maximum values for a valid array of numbers", () => {
@@ -25,6 +26,7 @@ it("should return the correct average, minimum, and maximum values for a valid a
     min: 2,
     max: 8
   };
+
   const result = utils(data);
   assert.deepStrictEqual(result, expectedOutput);
 }

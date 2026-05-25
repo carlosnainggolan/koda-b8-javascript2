@@ -1,3 +1,15 @@
+/**
+ * @typedef {object} utils function
+ * @property {number} avg value of average with data type number
+ * @property {number} min value of minimum with data type number
+ * @property {number} max value of maximum with data type number
+ */
+ 
+/** 
+ * @param {number[]} data the data is array of number
+ * @returns {utils} an object with avg, min, max property 
+ */
+
 function utils (data) {
   if (!Array.isArray(data)) {
     throw new Error("Input Harus Bertipe Array");
